@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cek bilangan ganjil dan genap</title>
+    <style>
+        .wrapper {
+            width: 300px;
+            padding: 20px;
+            box-sizing: border-box;
+            background: #eee;
+            border-radius: 10px;
+            margin: 10px auto;
+            text-align: center;
+            border: 1px solid #aaa;
+        }
+        .wrapper h1 {
+            text-align:center;
+        }
+        .wrapper .angka {
+            display: block;
+            margin: 10px auto;
+            font-size: 1rem;
+            padding: 16px;
+            border-radius: 4px;
+            border: 1px solid #eee;
+            outline: none;
+            border: 1px solid #ccc;
+            text-align: center;
+        }
+        .wrapper .tombol {
+            display: block;
+            margin: 0 auto;
+            font-size: 1.3rem;
+            padding: 12px 20px;
+            border-radius: 24px;
+            border: 1px solid #eee;
+            outline: none;
+            background: green;
+            color: #fff;
+        }
+        .wrapper .tombol:hover {
+            background: blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <h1>Masukkan Angka</h1>
+        <input  class="angka"  type="text" value="" placeholder="angka">
+        <button class="tombol" onclick="checkNumber()">cek angka</button>
+        <p class="hasil">-</p>
+
+    </div>
+    <script >
+        function checkNumber() {
+            // console.log("js jalan")
+            let angka = document.querySelector
+            (".angka").value;
+            let hasil = "";
+            console.log(angka);
+            if((angka%2)==0){
+                console.log("bilangan genap");
+                hasil = "Angka " + angka + " adalah bilangan genap";
+            }
+            else{
+                console.log("bilangan ganjil");
+                hasil = "Angka " + angka + " adalah bilangan ganjil";
+            }
+            document.querySelector(".hasil").innerHTML = hasil;
+        }
+    </script>
+</body>
+</html>
